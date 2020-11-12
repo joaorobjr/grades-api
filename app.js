@@ -49,11 +49,12 @@ global.logger = logger;
 
 const app = express();
 app.use(express.json());
-app.use(
+app.use(cors());
+/*app.use(
   cors({
     origin: settings.app.endpoint,
   })
-);
+);*/
 
 app.use('/grade', gradeRouter);
 
